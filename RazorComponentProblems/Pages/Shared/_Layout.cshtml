@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<title>Razor Components</title>
+	<!-- add support for Razor Components -->
+	<base href="~/" />
+	<component type="typeof(Microsoft.AspNetCore.Components.Web.HeadOutlet)"  render-mode="ServerPrerendered" />
+</head>
+<body>
+	@RenderBody()
+</body>
+</html>
