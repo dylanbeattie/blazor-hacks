@@ -1,4 +1,4 @@
-using Bongolis.Client.Pages;
+using Bongolis.Client;
 using Bongolis.Components;
 
 var builder = WebApplication.CreateBuilder(args);

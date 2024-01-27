@@ -1,13 +1,13 @@
 ﻿@page
 @using Bongolis.RazorClassLib
 
-RenderMode.Static: @(await Html.RenderComponentAsync<Component1>(RenderMode.Static))
+RenderMode.Static: @(await Html.RenderComponentAsync<Counter>(RenderMode.Static))
 <hr/>
-RenderMode.Server: @(await Html.RenderComponentAsync<Component1>(RenderMode.Server))
+RenderMode.Server: @(await Html.RenderComponentAsync<Counter>(RenderMode.Server))
 <hr/>
-RenderMode.ServerPrerendered: @(await Html.RenderComponentAsync<Component1>(RenderMode.ServerPrerendered))
+RenderMode.ServerPrerendered: @(await Html.RenderComponentAsync<Counter>(RenderMode.ServerPrerendered))
 <hr/>
-RenderMode.WebAssembly: @(await Html.RenderComponentAsync<Component1>(RenderMode.WebAssembly))
+RenderMode.WebAssembly: @(await Html.RenderComponentAsync<Counter>(RenderMode.WebAssembly))
 <hr/>
-RenderMode.WebAssemblyPrerendered: @(await Html.RenderComponentAsync<Component1>(RenderMode.WebAssemblyPrerendered))
+RenderMode.WebAssemblyPrerendered: @(await Html.RenderComponentAsync<Counter>(RenderMode.WebAssemblyPrerendered))
 <hr/>
