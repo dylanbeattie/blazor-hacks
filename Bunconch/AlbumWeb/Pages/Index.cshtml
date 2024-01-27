@@ -1,0 +1,15 @@
+﻿@page
+@using Flubbery.Client.Models
+<h2>Albums</h2>
+@{
+var mode = RenderMode.ServerPrerendered;
+var albums = new List<Album>() {
+	new Album("Love Over Gold", "Dire Straits"),
+	new Album("Invisible Touch", "Genesis"),
+	new Album("Scarlet", "Doja Cat"),
+};
+}
+@foreach (var album in albums)
+{
+	<p>@(await Html.RenderComponentAsync<AlbumRating>(mode, new { Album = album }))</p>
+}
