@@ -4,15 +4,23 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddRazorComponents().AddInteractiveServerComponents();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddRazorComponents()
+	.AddInteractiveServerComponents()
+	.AddInteractiveWebAssemblyComponents();
 
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment()) app.UseWebAssemblyDebugging();
+app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseAuthorization();
 
 app.MapRazorPages();
-app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
+// app.MapBlazorHub();
+app.MapRazorComponents<App>()
+	.AddInteractiveServerRenderMode()
+	.AddInteractiveWebAssemblyRenderMode();
 app.Run();

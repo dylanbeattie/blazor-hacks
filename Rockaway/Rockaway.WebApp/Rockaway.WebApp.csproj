@@ -40,4 +40,29 @@
 	<ItemGroup>
 		<InternalsVisibleTo Include="Rockaway.WebApp.Tests" />
 	</ItemGroup>
+	<ItemGroup>
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Pages\Index.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Artists\Create.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Artists\Delete.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Artists\Details.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Artists\Edit.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Artists\Index.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Shared\_LoginPartial.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\TicketOrders\Create.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\TicketOrders\Delete.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\TicketOrders\Details.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\TicketOrders\Edit.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\TicketOrders\Index.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Venues\Create.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Venues\Delete.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Venues\Details.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Venues\Edit.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Venues\Index.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Admin\_ViewStart.cshtml" />
+	  <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewStart.cshtml" />
+	  <_ContentIncludedByDefault Remove="Pages\Shared\DisplayTemplates\ArtistViewData.cshtml" />
+	  <_ContentIncludedByDefault Remove="Views\Checkout\Completed.cshtml" />
+	  <_ContentIncludedByDefault Remove="Views\Checkout\Confirm.cshtml" />
+	</ItemGroup>
 </Project>

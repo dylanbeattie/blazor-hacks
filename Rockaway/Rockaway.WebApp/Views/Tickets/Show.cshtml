@@ -1,21 +1,10 @@
 @using Rockaway.WebApp.Components;
 @model Rockaway.WebApp.Models.ShowViewData
-<h1>@Model.HeadlineArtistName</h1>
-<p>@Model.VenueName, @Model.VenueAddress</p>
-<p>@Model.ShowDate</p>
-<!-- form class="ticket-selector" method="post" -->
 
 @(await Html.RenderComponentAsync<Mungler>(RenderMode.ServerPrerendered, new { Value = 56m, CultureName="uk-UA" }))
 <hr />
 @(await Html.RenderComponentAsync<Bungler>(RenderMode.ServerPrerendered, new { Value = 56m, CultureName = "da-DK" }))
 <hr />
-@(await Html.RenderComponentAsync<TicketPicker>(RenderMode.ServerPrerendered, new { Show = new List<string>().Select(l => l) }))
-
-	
-<section class="row">
-		<div class="col-8 offset-2 text-end">
-			<input type="submit" value="Next &gt;" />
-		</div>
-	</section>
-
-<!-- /form -->
+@(await Html.RenderComponentAsync<TicketPicker>(RenderMode.ServerPrerendered, new {
+	Show = Model, VenueName = Model.VenueName, ShowDate = Model.ShowDate
+}))

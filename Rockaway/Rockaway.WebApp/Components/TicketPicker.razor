@@ -11,7 +11,7 @@
 	<div class="col-2">
 		<strong>Price</strong>
 	</div>
-	
+
 </section>
 @Message
 <section class="row">
@@ -37,8 +37,11 @@
 
 *@
 
-@Show
-
+@VenueName<br/>
+@ShowDate<br/>
+@Show.VenueName<br />
+@Show.ShowDate<br />
+<hr />
 HONK!
    @code {
 
@@ -48,7 +51,9 @@ HONK!
 	// public string Output => Value.ToString("C", cultureInfo);
 	// private readonly CultureInfo cultureInfo = new("da-DK");
 
-	[Parameter] public object? Show { get; set; }
+	[Parameter] public ShowViewData Show { get; set; }
+	[Parameter] public string VenueName { get; set; }
+	[Parameter] public DateTime ShowDate { get; set; }
 	// public string Message => String.Join(", ", Quantities.Select((id, value) => $"{id}:{value}"));
 	// private ShowViewData show = default!;
 	// private CultureInfo cultureInfo = CultureInfo.InvariantCulture;

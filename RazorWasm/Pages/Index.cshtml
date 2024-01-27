@@ -2,7 +2,7 @@
 @using RazorWasm.Components
 <h2>Albums</h2>
 @{
-var mode = RenderMode.ServerPrerendered;
+var mode = RenderMode.WebAssembly;
 var albums = new List<Album>() {
 	new Album("Love Over Gold", "Dire Straits"),
 	new Album("Invisible Touch", "Genesis"),
@@ -12,4 +12,8 @@ var albums = new List<Album>() {
 @foreach (var album in albums)
 {
 	<p>@(await Html.RenderComponentAsync<AlbumRating>(mode, new { Album = album }))</p>
+}
+
+@section Scripts {
+
 }

@@ -1,6 +1,16 @@
 ﻿@page
-<h2>Razor Component Weirdness</h2>
-<ul>
-<li><a href="/page1">This page works</a></li>
-<li><a href="/page2">This page doesn't</a></li>
-</ul>
+@using RazorComponentProblems.Components
+@using NodaTime
+<h2>Albums</h2>
+@{
+var mode = RenderMode.ServerPrerendered;
+var albums = new List<Album>() {
+	new Album("Love Over Gold", "Dire Straits", new LocalDate(1982,9,24)),
+	new Album("Invisible Touch", "Genesis", new LocalDate(1986,6,9)),
+	new Album("Scarlet", "Doja Cat", new LocalDate(2023,9,22)),
+};
+}
+@foreach (var album in albums)
+{
+	<p>@(await Html.RenderComponentAsync<AlbumRating>(mode, new { Album = album }))</p>
+}

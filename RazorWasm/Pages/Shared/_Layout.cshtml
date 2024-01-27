@@ -4,13 +4,16 @@
     <meta charset="utf-8" />
 	<title>Razor Components</title>
 	<!-- add support for Razor Components -->
-	<base href="~/" />
+	<base href="/"/>
 	<component type="typeof(Microsoft.AspNetCore.Components.Web.HeadOutlet)"  render-mode="ServerPrerendered" />
     <link rel="stylesheet" href="~/RazorWasm.styles.css" asp-append-version="true" />
 
 </head>
 <body>
-	@RenderBody()
+@RenderBody()
 </body>
+@RenderSection("Scripts", false)
 <script src="_framework/blazor.server.js"></script>
+<script src="_framework/blazor.web.js"></script>
+
 </html>

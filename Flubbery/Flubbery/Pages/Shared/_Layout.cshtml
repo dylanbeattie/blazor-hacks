@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<title>Razor Components</title>
+	<!-- add support for Razor Components -->
+	<base href="~/" />
+	<component type="typeof(Microsoft.AspNetCore.Components.Web.HeadOutlet)"  render-mode="ServerPrerendered" />
+    <link rel="stylesheet" href="~/RazorComponentProblems.styles.css" asp-append-version="true" />
+</head>
+<body>
+	@RenderBody()
+</body>
+<script src="_framework/blazor.server.js"></script>
+</html>

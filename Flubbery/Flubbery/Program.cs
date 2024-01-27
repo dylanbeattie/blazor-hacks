@@ -1,5 +1,4 @@
-using Flubbery.Client.Pages;
-using Flubbery.Components;
+using Flubbery.Client.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 

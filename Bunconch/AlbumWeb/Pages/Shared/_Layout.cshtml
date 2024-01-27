@@ -6,10 +6,11 @@
 	<!-- add support for Razor Components -->
 	<base href="~/" />
 	<component type="typeof(Microsoft.AspNetCore.Components.Web.HeadOutlet)"  render-mode="ServerPrerendered" />
-    <link rel="stylesheet" href="~/RazorComponentProblems.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AlbumWeb.styles.css" asp-append-version="true" />
 </head>
 <body>
 	@RenderBody()
 </body>
 <script src="_framework/blazor.server.js"></script>
+<script src="_framework/blazor.web.js"></script>
 </html>
