@@ -1,19 +1,11 @@
 ﻿@page "/counter"
-@rendermode InteractiveWebAssembly
+@* rendermode InteractiveWebAssembly *@
 
 <PageTitle>Counter</PageTitle>
 
-<h1>Counter</h1>
-
-<p role="status">Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<p>Current count: @currentCount <button class="btn btn-primary" @onclick="IncrementCount">Click me</button></p>
 
 @code {
     private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
+    private void IncrementCount() => currentCount++;
 }
