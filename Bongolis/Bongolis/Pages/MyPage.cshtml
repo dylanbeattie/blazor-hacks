@@ -1,29 +1,13 @@
 ﻿@page
 @using Bongolis.RazorClassLib
-@model Bongolis.Pages.MyPage
 
-<!DOCTYPE html>
-
-<html>
-<head>
-	<base href="~/"/>
-	<title>My Page</title>
-</head>
-<body>
-<div>
-	RenderMode.Static: @(await Html.RenderComponentAsync<Component1>(RenderMode.Static))
-	<hr/>
-	RenderMode.Server: @(await Html.RenderComponentAsync<Component1>(RenderMode.Server))
-	<hr/>
-	RenderMode.ServerPrerendered: @(await Html.RenderComponentAsync<Component1>(RenderMode.ServerPrerendered))
-	<hr/>
-	RenderMode.WebAssembly: @(await Html.RenderComponentAsync<Component1>(RenderMode.WebAssembly))
-	<hr/>
-	RenderMode.WebAssemblyPrerendered: @(await Html.RenderComponentAsync<Component1>(RenderMode.WebAssemblyPrerendered))
-	<hr/>
-
-</div>
-<script src="_framework/blazor.server.js"></script>
-<script src="_framework/blazor.web.js"></script>
-</body>
-</html>
+RenderMode.Static: @(await Html.RenderComponentAsync<Component1>(RenderMode.Static))
+<hr/>
+RenderMode.Server: @(await Html.RenderComponentAsync<Component1>(RenderMode.Server))
+<hr/>
+RenderMode.ServerPrerendered: @(await Html.RenderComponentAsync<Component1>(RenderMode.ServerPrerendered))
+<hr/>
+RenderMode.WebAssembly: @(await Html.RenderComponentAsync<Component1>(RenderMode.WebAssembly))
+<hr/>
+RenderMode.WebAssemblyPrerendered: @(await Html.RenderComponentAsync<Component1>(RenderMode.WebAssemblyPrerendered))
+<hr/>

@@ -1,28 +1,13 @@
 ﻿@page
 @using Bongolis.Client.Pages
-@model Bongolis.Pages.Counters
 
-<!DOCTYPE html>
-
-<html>
-<head>
-	<base href="~/"/>
-	<title>My Page</title>
-</head>
-<body>
-<div>
-	RenderMode.Static: @(await Html.RenderComponentAsync<Counter>(RenderMode.Static))
-	<hr/>
-	RenderMode.Server: @(await Html.RenderComponentAsync<Counter>(RenderMode.Server))
-	<hr/>
-	RenderMode.ServerPrerendered: @(await Html.RenderComponentAsync<Counter>(RenderMode.ServerPrerendered))
-	<hr/>
-	RenderMode.WebAssembly: @(await Html.RenderComponentAsync<Counter>(RenderMode.WebAssembly))
-	<hr/>
-	RenderMode.WebAssemblyPrerendered: @(await Html.RenderComponentAsync<Counter>(RenderMode.WebAssemblyPrerendered))
-	<hr/>
-
-</div>
-<script src="_framework/blazor.web.js"></script>
-</body>
-</html>
+RenderMode.Static: @(await Html.RenderComponentAsync<Counter>(RenderMode.Static))
+<hr/>
+RenderMode.Server: @(await Html.RenderComponentAsync<Counter>(RenderMode.Server))
+<hr/>
+RenderMode.ServerPrerendered: @(await Html.RenderComponentAsync<Counter>(RenderMode.ServerPrerendered))
+<hr/>
+RenderMode.WebAssembly: @(await Html.RenderComponentAsync<Counter>(RenderMode.WebAssembly))
+<hr/>
+RenderMode.WebAssemblyPrerendered: @(await Html.RenderComponentAsync<Counter>(RenderMode.WebAssemblyPrerendered))
+<hr/>
